@@ -4,8 +4,8 @@ function Navbar({ user }) {
   return (
     <nav>
       <img src="" />
-      <a>Регистрация</a>
-      <a>Авторизация</a>
+      <a href="/auth/registration">Регистрация</a>
+      <a href="/auth/logo">Авторизация</a>
       {user && <a>Выйти</a>}
     </nav>
   );
