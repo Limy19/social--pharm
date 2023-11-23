@@ -1,11 +1,11 @@
 const React = require('react');
 const Layot = require('./Layot');
-const Navbar = require('./Navbar');
+const ProductList = require('./ProductList');
 
-function Main({ title }) {
+function Main({ title, products }) {
   return (
     <Layot title={title}>
-      <Navbar />
+      <ProductList products={products} />
     </Layot>
   );
 }

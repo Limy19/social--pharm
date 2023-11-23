@@ -21,6 +21,10 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   rules: {
-    'linebreak-style': ['error', 'windows'],
+    'linebreak-style': 0,
+    'react/prop-types': 0,
+    'comma-dangle': 0,
+    'import/no-extraneous-dependencies': 0,
+    'max-len': 0,
   },
 };

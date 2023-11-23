@@ -1,10 +1,14 @@
 const router = require('express').Router();
 const Main = require('../../components/Main');
 
-router.get('/', (req, res) => {
+const { Drug } = require('../../db/models');
+
+router.get('/', async (req, res) => {
   try {
+    const products = await Drug.findAll();
     const html = res.renderComponent(Main, {
       title: 'Social-Pharmacy',
+      products,
     });
     res.status(200).send(html);
   } catch ({ message }) {
