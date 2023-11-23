@@ -1,4 +1,72 @@
+.card {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.cardItem {
+  display: flex;
+  margin: 8px;
+  width: 200px;
+  height: 370px;
+  align-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardItem {
+  border: 0.5px solid gray;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+
+  text-align: center;
+  font-family: arial;
+}
 .cardImage {
   width: 120px;
   height: auto;
+}
+.card button {
+  border: none;
+  outline: 0;
+  padding: 5px;
+  color: white;
+  background-color: #000000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+.freeDrugsBanner {
+  margin-left: 65px;
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
+}
+.freeDrugs {
+  display: flex;
+  padding-left: 12px;
+  align-items: center;
+  width: auto;
+  height: auto;
+  font-size: 18px;
+}
+
+.FreeOrder {
+  margin-left: 8px;
+  border: none;
+  outline: 0;
+  padding: 5px;
+  color: white;
+  background-color: #000000;
+  text-align: center;
+  cursor: pointer;
+  width: 100px;
+  height: 18px;
+  font-size: 8px;
 }
