@@ -1,16 +1,11 @@
 const React = require('react');
+const ProducCard = require('./ProductCard');
 
 function ProductList({ products }) {
   return (
     <div className="card">
       {products.map((product) => (
-        <>
-          <p>{product.title}</p>
-          <img className="cardImage" src={product.url} alt="BibaBoba" />
-          <p>{product.price}</p>
-          <p>{product.count}</p>
-          <p>{product.count}</p>
-        </>
+        <ProducCard product={product} />
       ))}
     </div>
   );
