@@ -6,6 +6,7 @@ function Main({ title }) {
   return (
     <Layot title={title}>
       <Navbar />
+      
     </Layot>
   );
 }
