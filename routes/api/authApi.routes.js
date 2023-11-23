@@ -24,4 +24,24 @@ router.post('/registration', async (req, res) => {
     res.status(500).end();
   }
 });
+
+router.post('/logo', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const user = await User.findOne({ where: { email } });
+    if (user) {
+      const compare = await bcrypt.compare(password, user.password);
+      if (compare) {
+        res.json({ logo: true, url: '/' });
+      } else {
+        res.json({ message: 'Неправильный пароль или логин' });
+      }
+    } else {
+      res.json({ message: 'Пользователь с такой почтой не зарегистрирован' });
+    }
+  } catch ({ message }) {
+    console.log(message);
+    res.status(500).end();
+  }
+});
 module.exports = router;
