@@ -4,11 +4,22 @@ const React = require('react');
 
 function Navbar({ user }) {
   return (
-    <nav>
-      <img src="" />
-      <a href="/auth/registration">Регистрация</a>
-      <a href="/auth/logo">Авторизация</a>
-      {user && <a>Выйти</a>}
+    <nav className="navigationBar">
+      <ul>
+        <li>
+          <a href="default.asp">Главная</a>
+        </li>
+        <li>
+          <a href="/auth/registration">Регистрация</a>
+        </li>
+        <li>
+          <a href="/auth/logo">Авторизация</a>
+        </li>
+        <li>
+          <a href="/auth/logo">Корзина</a>
+        </li>
+        <li>{user && <a>Выйти</a>}</li>
+      </ul>
     </nav>
   );
 }

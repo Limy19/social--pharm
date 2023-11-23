@@ -13,9 +13,9 @@ function ProductCard({ product }) {
           <p className="price">Цена: 0</p>
           <p>{`В наличии: ${product.count}`}</p>
           <p>
-                  <a href={`/product/${product.id}/update`}>
-        <button type="submit">Изменить</button>
-      </a>
+            <a href={`/product/${product.id}/update`}>
+              <button type="submit">Изменить</button>
+            </a>
           </p>
         </>
       ) : (
@@ -23,13 +23,12 @@ function ProductCard({ product }) {
           <p className="price">{`Цена: ${product.price} `}</p>
           <p>{`В наличии: ${product.count}`}</p>
           <p>
-             <a href={`/product/${product.id}/update`}>
-        <button type="submit">Изменить</button>
-      </a>
+            <a href={`/product/${product.id}/update`}>
+              <button type="submit">Изменить</button>
+            </a>
           </p>
         </>
       )}
-
     </div>
   );
 }
