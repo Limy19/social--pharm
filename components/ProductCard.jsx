@@ -1,6 +1,6 @@
 const React = require('react');
 
-function ProducCard({ product }) {
+function ProductCard({ product }) {
   return (
     <div className="cardItem">
       <p>{product.title}</p>
@@ -15,4 +15,4 @@ function ProducCard({ product }) {
   );
 }
 
-module.exports = ProducCard;
+module.exports = ProductCard;
