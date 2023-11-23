@@ -39,7 +39,9 @@ if (userLogo) {
         password: password.value,
       }),
     });
+
     const data = await res.json();
+
     if (data.logo) {
       window.location.assign(data.url);
     } else {

@@ -2,7 +2,7 @@ const React = require('react');
 
 function AddProduct() {
   return (
-    <form className='addProduct'>
+    <form className="addProduct">
       <input type="text" name="title" />
       <input type="text" name="url" />
       <input type="text" name="price" />
