@@ -26,5 +26,7 @@ module.exports = {
     'comma-dangle': 0,
     'import/no-extraneous-dependencies': 0,
     'max-len': 0,
+    'import/no-dynamic-require': 0,
+    'global-require': 0,
   },
 };
