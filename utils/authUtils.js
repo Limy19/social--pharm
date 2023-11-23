@@ -6,10 +6,10 @@ const jwt = require('jsonwebtoken');
 const jwtConfig = require('../config/jwtConfig');
 
 const generateTokens = (nachinka) => ({
-  aToken: jwt.sign(nachinka, 'secretA', {
+  aToken: jwt.sign(nachinka, process.env.ACCESS_TOKEN_SECRET, {
     expiresIn: jwtConfig.access.expiresIn,
   }),
-  rToken: jwt.sign(nachinka, 'secretR', {
+  rToken: jwt.sign(nachinka, process.env.REFRESH_TOKEN_SECRET, {
     expiresIn: jwtConfig.refresh.expiresIn,
   }),
 });
