@@ -9,6 +9,7 @@ function Logo({ title }) {
         <input name="password" placeholder="password" required />
         <button type="submit">Войти</button>
       </form>
+      <div className="errLogo"></div>
     </Layot>
   );
 }

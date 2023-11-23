@@ -1,18 +1,21 @@
 const React = require('react');
 
-function ProducCard({ product }) {
+function ProductCard({ product }) {
   return (
     <div className="cardItem">
       <header className="cardHeader">
         <h2>{product.title}</h2>
       </header>
       <img className="cardImage" src={product.url} alt="BibaBoba" />
+
       {product.status ? (
         <>
           <p className="price">Цена: 0</p>
           <p>{`В наличии: ${product.count}`}</p>
           <p>
-            <button type="submit"> Add to Cart </button>
+                  <a href={`/product/${product.id}/update`}>
+        <button type="submit">Изменить</button>
+      </a>
           </p>
         </>
       ) : (
@@ -20,12 +23,15 @@ function ProducCard({ product }) {
           <p className="price">{`Цена: ${product.price} `}</p>
           <p>{`В наличии: ${product.count}`}</p>
           <p>
-            <button type="submit"> Add to Cart </button>
+             <a href={`/product/${product.id}/update`}>
+        <button type="submit">Изменить</button>
+      </a>
           </p>
         </>
       )}
+
     </div>
   );
 }
 
-module.exports = ProducCard;
+module.exports = ProductCard;
