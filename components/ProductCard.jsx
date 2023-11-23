@@ -8,6 +8,9 @@ function ProducCard({ product }) {
       <p>{product.price}</p>
       <p>{product.count}</p>
       <p>{product.count}</p>
+      <a href={`/product/${product.id}/update`}>
+        <button type="submit">Изменить</button>
+      </a>
     </div>
   );
 }
