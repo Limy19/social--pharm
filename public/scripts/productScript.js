@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 const formAddProduct = document.querySelector('.addProduct');
 const productList = document.querySelector('.card');
 
