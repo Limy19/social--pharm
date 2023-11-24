@@ -25,7 +25,7 @@ function Navbar({ user }) {
         <li>
           <a href="/basket">Корзина</a>
         </li>
-        <li>{user && <a>Выйти</a>}</li>
+        <li>{user && <a href="/api/auth/logout"> Выйти </a>}</li>
       </ul>
     </nav>
   );

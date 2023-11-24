@@ -1,4 +1,3 @@
-
 /* eslint-disable no-console */
 const React = require('react');
 
@@ -37,7 +36,7 @@ function ProductCard({ product, user }) {
               <button type="submit"> Изменить </button>
             </a>
           ) : (
-            <a href={'/'}>
+            <a href="/">
               <button type="submit"> Купить </button>
             </a>
           )}

@@ -6,15 +6,24 @@ function Rega({ title }) {
   return (
     <Layot title={title}>
       <form className="userRega">
-        <input name="name" placeholder="name" required />
-        <input name="email" placeholder="email" required />
+        <input className="inputForm" name="name" placeholder="name" required />
         <input
+          className="inputForm"
+          name="email"
+          placeholder="email"
+          required
+        />
+        <input
+          className="inputForm"
           name="password"
           placeholder="password"
           required
           type="password"
         />
-        <button type="submit">Регистрация</button>
+        <button className="formButtonchik" type="submit">
+          Регистрация
+        </button>
+        <a href="/api/auth/logo"> У меня уже есть аккаунт</a>
       </form>
       <div className="errRega"></div>
     </Layot>

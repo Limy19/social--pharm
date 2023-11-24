@@ -9,7 +9,6 @@ const basketRout = require('./view/basket.routes');
 
 const weklyProductUpdateRoute = require('./api/weklyProductUpdate.routes');
 
-
 router.use('/', mainViewRout);
 router.use('/basket', basketRout);
 router.use('/auth', authViewRout);

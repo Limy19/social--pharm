@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  font-family: arial;
 }
 .card {
   display: flex;
@@ -115,4 +116,37 @@ li a:hover:not(.active) {
 }
 .price {
   margin: 4px;
+}
+
+.userLogo {
+  display: flex;
+  width: 50%;
+  margin-top: 25%;
+  margin-left: 25%;
+  border-radius: 6px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.userRega {
+  display: flex;
+  width: 50%;
+  margin-top: 20%;
+  margin-left: 25%;
+  border-radius: 6px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.inputForm {
+  width: 200px;
+  height: 25px;
+}
+.formButtonchik {
+  display: flex;
+  width: auto;
 }

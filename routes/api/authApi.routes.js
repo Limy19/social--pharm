@@ -66,4 +66,16 @@ router.post('/logo', async (req, res) => {
     res.status(500).end();
   }
 });
+
+router.get('/logout', async (req, res) => {
+  try {
+    res.locals.user = undefined;
+    res
+      .clearCookie(cookiesConfig.refresh)
+      .clearCookie(cookiesConfig.access)
+      .redirect('/');
+  } catch (error) {
+    console.log(error.message);
+  }
+});
 module.exports = router;
