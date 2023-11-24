@@ -83,4 +83,12 @@ if (productList) {
       }
     }
   });
+  productList.addEventListener('click', async (ev) => {
+    if (ev.target.classList.contains('buyProduct"')) {
+      const card = ev.target.closest('.cardItem');
+      const res = await fetch('/basket', {
+        method: 'POST',
+      });
+    }
+  });
 }

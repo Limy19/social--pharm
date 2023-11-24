@@ -36,8 +36,11 @@ function ProductCard({ product, user }) {
               <button type="submit"> Изменить </button>
             </a>
           ) : (
-            <a href="/">
-              <button type="submit"> Купить </button>
+            <a href={'/'}>
+              <button className="buyProduct" type="submit">
+                {' '}
+                Купить{' '}
+              </button>
             </a>
           )}
         </p>
