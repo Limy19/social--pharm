@@ -48,14 +48,13 @@ body {
   font-size: 18px;
 }
 .freeDrugsBanner {
-  margin-left: 65px;
   display: flex;
   width: 100%;
   height: auto;
   flex-direction: row;
   align-content: space-between;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .freeDrugs {
   display: flex;
@@ -149,4 +148,49 @@ li a:hover:not(.active) {
 .formButtonchik {
   display: flex;
   width: auto;
+}
+.errLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+}
+.buttonWeklyProdAdd {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  border: 0px;
+  background-color: aqua;
+  margin-bottom: 15px;
+}
+
+.freebar {
+  margin-top: 5px;
+  width: 155px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.freedrugName {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+}
+.peshka {
+  margin-top: 15px;
+  margin-bottom: 1px;
+  background-color: aqua;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
 }

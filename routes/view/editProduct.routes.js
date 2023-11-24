@@ -14,6 +14,7 @@ router.get('/:id/update', async (req, res) => {
     });
     res.send(html);
   } catch ({ message }) {
+    console.log(message);
     res.status(500).end();
   }
 });

@@ -17,6 +17,7 @@ router.post('/', async (req, res) => {
       res.json({ append: false });
     }
   } catch ({ message }) {
+    console.log(message);
     res.status(500).end();
   }
 });
