@@ -2,13 +2,14 @@ const React = require('react');
 const Layot = require('./Layot');
 
 function Basket({ title, order }) {
+  // console.log(order);
   return (
     <Layot title={title}>
-      <div>
+      {/* <div>
         {order[0].OrderItems.map((orderItem) => (
           <p>{orderItem.Drug.title}</p>
         ))}
-      </div>
+      </div> */}
     </Layot>
   );
 }
