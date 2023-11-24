@@ -11,7 +11,7 @@ router.use('/auth', authViewRout);
 router.use('/product', editProductRout);
 
 router.use('/api/auth', authApiRout);
-router.use('/api', productApiRout);
+router.use('/api/product', productApiRout);
 router.use('/api/wekly', weklyProductUpdateRoute);
 
 module.exports = router;
