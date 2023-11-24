@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 const React = require('react');
 const Layot = require('./Layot');
 

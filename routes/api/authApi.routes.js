@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 require('dotenv').config();
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
@@ -34,7 +35,12 @@ router.post('/logo', async (req, res) => {
     if (user) {
       const compare = await bcrypt.compare(password, user.password);
       const { aToken, rToken } = generateTokens({
-        user: { id: user.id, name: user.name, email: user.email },
+        user: {
+          id: user.id,
+          name: user.name,
+          email: user.email,
+          isAdmin: user.isAdmin,
+        },
       });
       if (compare) {
         res

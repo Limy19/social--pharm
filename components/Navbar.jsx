@@ -6,15 +6,22 @@ function Navbar({ user }) {
   return (
     <nav className="navigationBar">
       <ul>
+        <li>{user && <a>{`Привет, ${user.name}`}</a>}</li>
         <li>
-          <a href="default.asp">Главная</a>
+          <a href="/">Главная</a>
         </li>
-        <li>
-          <a href="/auth/registration">Регистрация</a>
-        </li>
-        <li>
-          <a href="/auth/logo">Авторизация</a>
-        </li>
+        {!user ? (
+          <>
+            <li>
+              <a href="/auth/registration">Регистрация</a>
+            </li>
+            <li>
+              <a href="/auth/logo">Авторизация</a>
+            </li>
+          </>
+        ) : (
+          ''
+        )}
         <li>
           <a href="/basket">Корзина</a>
         </li>
