@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const fileuploadMiddeleware = require('../../utils/fileuploadMiddeleware');
 
 const EditProduct = require('../../components/EditProduct');
 const { Drug } = require('../../db/models');
@@ -18,3 +19,7 @@ router.get('/:id/update', async (req, res) => {
 });
 
 module.exports = router;
+//
+// const file = req.files?.homesImg;
+// const foto = await fileuploadMiddeleware(file);
+// при записи в базу мы назначаем ключу url:foto

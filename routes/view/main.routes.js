@@ -1,4 +1,5 @@
 const router = require('express').Router();
+
 const Main = require('../../components/Main');
 
 const { Drug } = require('../../db/models');
@@ -16,4 +17,5 @@ router.get('/', async (req, res) => {
     res.status(500).end();
   }
 });
+
 module.exports = router;
