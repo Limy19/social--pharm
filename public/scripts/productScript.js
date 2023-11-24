@@ -70,8 +70,8 @@ if (editProduct) {
 }
 if (productList) {
   productList.addEventListener('click', async (event) => {
+    const card = event.target.closest('.cardItem');
     if (event.target.classList.contains('delProduct')) {
-      const card = event.target.closest('.cardItem');
       const res = await fetch(`/api/product/${card.dataset.id}/delete`, {
         method: 'DELETE',
       });
@@ -82,13 +82,20 @@ if (productList) {
         document.querySelector('.errorDelProduct').innerHTML = date.message;
       }
     }
+
+    // console.log(card);
+    else if (event.target.classList.contains('buyProduct')) {
+      // console.log(card.dataset.id);
+      // const card = event.target.closest('.cardItem');
+      const res = await fetch('/api/basket/', {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify({ id: card.dataset.id }),
+      });
+    }
   });
-  // productList.addEventListener('click', async (ev) => {
-  //   if (ev.target.classList.contains('buyProduct"')) {
-  //     const card = ev.target.closest('.cardItem');
-  //     const res = await fetch('/basket', {
-  //       method: 'POST',
-  //     });
-  //   }
-  // });
+
+
 }

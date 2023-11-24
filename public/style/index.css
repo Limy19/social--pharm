@@ -149,6 +149,47 @@ li a:hover:not(.active) {
   display: flex;
   width: auto;
 }
+
+.products {
+  width: 300px;
+  border: 2px solid #111;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  width: 280px;
+  border: 2px solid purple;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.pay {
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+}
+.zakaz {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.fourtyFour {
+  display: flex;
+  margin-top: 25%;
+  justify-content: center;
+}
+
+.Nan {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin-top: 5%;
+
 .errLogo {
   display: flex;
   align-items: center;
@@ -193,4 +234,5 @@ li a:hover:not(.active) {
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
+
 }
