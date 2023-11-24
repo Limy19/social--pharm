@@ -25,6 +25,7 @@ function Rega({ title }) {
         </button>
         <a href="/auth/logo"> У меня уже есть аккаунт</a>
       </form>
+
       <div className="errRega"></div>
     </Layot>
   );

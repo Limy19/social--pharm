@@ -4,7 +4,12 @@ const authViewRout = require('./view/auth.routes');
 const authApiRout = require('./api/authApi.routes');
 const productApiRout = require('./api/productApi.routes');
 const editProductRout = require('./view/editProduct.routes');
+
 const basketApiRout = require('./api/basketApi.routes');
+
+const fourtyfourRoute = require('./view/fourtyfour.route');
+
+
 const basketRout = require('./view/basket.routes');
 
 const weklyProductUpdateRoute = require('./api/weklyProductUpdate.routes');
@@ -17,6 +22,10 @@ router.use('/product', editProductRout);
 router.use('/api/auth', authApiRout);
 router.use('/api/product', productApiRout);
 router.use('/api/wekly', weklyProductUpdateRoute);
+
 router.use('/api/basket', basketApiRout);
+
+router.use('*', fourtyfourRoute);
+
 
 module.exports = router;

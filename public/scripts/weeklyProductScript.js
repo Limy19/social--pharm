@@ -34,7 +34,6 @@ if (element) {
         cardElement.textContent = product.name; // Здесь выведите нужные данные товара
         card.appendChild(cardElement);
       });
-
       divchik.innerHTML = data; // Вставляем новые данные после существующих карточек товаров
     }
   });

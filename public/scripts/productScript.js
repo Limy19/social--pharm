@@ -8,18 +8,18 @@ if (formAddProduct) {
     event.preventDefault();
     const { title, url, price, count, status } = event.target;
     //
-    const img = [...url.files];
-    const dataFile = new FormData();
-    img.forEach((foto) => {
-      dataFile.append('homesImg', foto);
-    });
-    dataFile.append('title', title.value);
-    dataFile.append('price', price.value);
-    dataFile.append('count', count.value);
-    dataFile.append('status', status.value);
+    // const img = [...url.files];
+    // const dataFile = new FormData();
+    // img.forEach((foto) => {
+    //   dataFile.append('homesImg', foto);
+    // });
+    // dataFile.append('title', title.value);
+    // dataFile.append('price', price.value);
+    // dataFile.append('count', count.value);
+    // dataFile.append('status', status.value);
 
     //
-    const response = await fetch('/api/', {
+    const response = await fetch('/api/product', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -82,6 +82,7 @@ if (productList) {
         document.querySelector('.errorDelProduct').innerHTML = date.message;
       }
     }
+
     // console.log(card);
     else if (event.target.classList.contains('buyProduct')) {
       // console.log(card.dataset.id);
@@ -95,4 +96,6 @@ if (productList) {
       });
     }
   });
+
+
 }

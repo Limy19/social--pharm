@@ -14,6 +14,7 @@ module.exports = function Layout({ title, children, user }) {
         <link rel="stylesheet" href="/style/index.css" />
       </head>
       <body>
+        
         <div className="Main">
           <div className="good">
             <Navbar user={user} />

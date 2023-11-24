@@ -7,19 +7,20 @@ const productList = require('../../components/ProductList');
 
 router.get('/', async (req, res) => {
   try {
-    const product = await Drug.findAll({ raw: true });
-    const products = product.map((el) => {
-      el.status = false;
-      return el;
+    await Drug.update({ status: false }, { where: { status: true } });
+    const products = await Drug.findAll({
+      raw: true,
+      order: [['price', 'ASC']],
     });
-    let i = 1;
-    while (i <= 3) {
+
+    for (let i = 1; i < 3; i++) {
       const a = products[Math.floor(Math.random() * products.length)];
       // console.log('>>>>>>>>>>', a);
+      await Drug.update({ status: true }, { where: { id: a.id } });
       a.status = true;
-      i += 1;
     }
     // console.log(products, '<<<<<<<<');
+
     const html = res.renderComponent(productList, {
       title: 'Social-Pharmacy',
       products,
@@ -27,6 +28,7 @@ router.get('/', async (req, res) => {
 
     res.json(html);
   } catch ({ message }) {
+    console.log(message);
     res.status(500).end();
   }
 });

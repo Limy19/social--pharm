@@ -32,9 +32,16 @@ function ProductCard({ product, user }) {
       ) : (
         <p className="price">
           {user.isAdmin ? (
-            <a href={`/product/${product.id}/update`}>
-              <button type="submit"> Изменить </button>
-            </a>
+            <>
+              <a href={`/product/${product.id}/update`}>
+                <button type="submit"> Изменить </button>
+              </a>
+
+              <button className="delProduct" type="submit">
+                {' '}
+                Удалить{' '}
+              </button>
+            </>
           ) : (
             <a href="/basket">
               <button className="buyProduct" type="submit">
