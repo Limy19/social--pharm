@@ -6,7 +6,7 @@ module.exports = {
       [
         {
           userId: 1,
-          status: 'готов к выдаче',
+          status: 'оплачен',
           sumZakaza: 200,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -14,7 +14,7 @@ module.exports = {
         {
           userId: 1,
           sumZakaza: 200,
-          status: 'заказ собирается',
+          status: 'не оплачен',
           createdAt: new Date(),
           updatedAt: new Date(),
         },

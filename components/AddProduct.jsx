@@ -8,7 +8,7 @@ function AddProduct({ user }) {
         ? (
           <form className="addProduct">
             <input type="text" name="title" placeholder="title" />
-            <input type="text" name="url" placeholder="url" />
+            <input type="file name="url" placeholder="url" />
             <input type="text" name="price" placeholder="price" />
             <input type="text" name="count" placeholder="count" />
             <input type="text" name="status" placeholder="status" />

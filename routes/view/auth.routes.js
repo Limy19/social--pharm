@@ -1,4 +1,5 @@
 const router = require('express').Router();
+
 const Logo = require('../../components/Logo');
 const Rega = require('../../components/Rega');
 
@@ -23,4 +24,5 @@ router.get('/logo', (req, res) => {
     res.status(500).end();
   }
 });
+
 module.exports = router;

@@ -23,7 +23,7 @@ function Navbar({ user }) {
           ''
         )}
         <li>
-          <a href="/auth/logo">Корзина</a>
+          <a href="/basket">Корзина</a>
         </li>
         <li>{user && <a>Выйти</a>}</li>
       </ul>
