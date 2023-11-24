@@ -7,7 +7,12 @@ function Main({ title, products }) {
   return (
     <Layot title={title}>
       <AddProduct />
+
       <ProductList products={products} />
+
+      <button type="button" className="FreeOrder">
+        Заказать бесплатно!
+      </button>
     </Layot>
   );
 }

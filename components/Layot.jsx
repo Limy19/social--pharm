@@ -9,11 +9,16 @@ module.exports = function Layout({ title, children }) {
         {/* <link rel="stylesheet" href="/css/style.css" /> */}
         <script defer src="/scripts/productScript.js" />
         <script defer src="/scripts/authScript.js" />
+        <script defer src="/scripts/weeklyProductScript.js" />
         <link rel="stylesheet" href="/style/index.css" />
       </head>
       <body>
-        <Navbar />
-        {children}
+        <div className="Main">
+          <div className="good">
+            <Navbar />
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

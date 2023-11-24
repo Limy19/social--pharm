@@ -12,6 +12,7 @@ function EditProduct({ title, idProduct }) {
         <input type="text" name="status" value={idProduct.status} />
         <button type="submit">Сохранить</button>
       </form>
+      <div className="errorEditProduct"></div>
     </Layot>
   );
 }
