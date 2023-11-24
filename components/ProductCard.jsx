@@ -2,9 +2,9 @@
 const React = require('react');
 
 function ProductCard({ product, user }) {
-  console.log('>>>>>>>>>>>>>', user);
+  // console.log('>>>>>>>>>>>>>', product);
   return (
-    <div className="cardItem">
+    <div className="cardItem" data-id={product.id}>
       <header className="cardHeader">
         <h2 className="cardh2">{product.title}</h2>
       </header>
@@ -36,7 +36,7 @@ function ProductCard({ product, user }) {
               <button type="submit"> Изменить </button>
             </a>
           ) : (
-            <a href={'/'}>
+            <a href="/basket">
               <button className="buyProduct" type="submit">
                 {' '}
                 Купить{' '}

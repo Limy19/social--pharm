@@ -10,7 +10,7 @@ module.exports = function Layout({ title, children, user }) {
         <script defer src="/scripts/productScript.js" />
         <script defer src="/scripts/authScript.js" />
         <script defer src="/scripts/weeklyProductScript.js" />
-        <script defer src="/scripts/basketScript.js" />
+        {/* <script defer src="/scripts/basketScript.js" /> */}
         <link rel="stylesheet" href="/style/index.css" />
       </head>
       <body>

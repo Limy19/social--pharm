@@ -4,7 +4,7 @@ const Layot = require('./Layot');
 function EditProduct({ title, idProduct }) {
   return (
     <Layot title={title}>
-      <form className="editProduct">
+      <form className="editProduct" data-id={idProduct.id}>
         <input type="text" name="title" value={idProduct.title} />
         <input type="text" name="url" value={idProduct.url} />
         <input type="text" name="price" value={idProduct.price} />

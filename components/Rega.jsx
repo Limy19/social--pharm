@@ -23,7 +23,7 @@ function Rega({ title }) {
         <button className="formButtonchik" type="submit">
           Регистрация
         </button>
-        <a href="/api/auth/logo"> У меня уже есть аккаунт</a>
+        <a href="/auth/logo"> У меня уже есть аккаунт</a>
       </form>
       <div className="errRega"></div>
     </Layot>

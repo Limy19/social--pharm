@@ -21,17 +21,17 @@ if (formAddProduct) {
     //
     const response = await fetch('/api/', {
       method: 'POST',
-      // headers: {
-      //   'Content-type': 'application/json',
-      // },
-      // body: JSON.stringify({
-      //   title: title.value,
-      //   url: url.value,
-      //   price: price.value,
-      //   count: count.value,
-      //   status: status.value,
-      // }),
-      body: dataFile,
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        title: title.value,
+        url: url.value,
+        price: price.value,
+        count: count.value,
+        status: status.value,
+      }),
+      // body: dataFile,
     });
     const data = await response.json();
     if (data.html) {
@@ -70,8 +70,8 @@ if (editProduct) {
 }
 if (productList) {
   productList.addEventListener('click', async (event) => {
+    const card = event.target.closest('.cardItem');
     if (event.target.classList.contains('delProduct')) {
-      const card = event.target.closest('.cardItem');
       const res = await fetch(`/api/product/${card.dataset.id}/delete`, {
         method: 'DELETE',
       });
@@ -82,12 +82,16 @@ if (productList) {
         document.querySelector('.errorDelProduct').innerHTML = date.message;
       }
     }
-  });
-  productList.addEventListener('click', async (ev) => {
-    if (ev.target.classList.contains('buyProduct"')) {
-      const card = ev.target.closest('.cardItem');
-      const res = await fetch('/basket', {
+    // console.log(card);
+    else if (event.target.classList.contains('buyProduct')) {
+      // console.log(card.dataset.id);
+      // const card = event.target.closest('.cardItem');
+      const res = await fetch('/api/basket/', {
         method: 'POST',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify({ id: card.dataset.id }),
       });
     }
   });

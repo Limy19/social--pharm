@@ -25,6 +25,7 @@ router.put('/:id/update', async (req, res) => {
   try {
     const { title, url, price, count, status } = req.body;
     const { id } = req.params;
+    console.log(req.params);
     if (title && url && price && count && status) {
       const product = await Drug.update(
         { title, url, price, count, status },
