@@ -7,12 +7,17 @@ function ProductList({ products, user }) {
 
   return (
     <div className="gavno" data-products={productsJSON}>
+      <p className="peshka">Товар недели:</p>
       <div className="freeDrugsBanner">
-        <p>Бесплатный товар недели:</p>
         {products.map((product) => (
           <FreeDrugsBanner product={product} />
         ))}
       </div>
+
+      <button type="submit" className="buttonWeklyProdAdd">
+        Добавить бесплатный товар в корзину
+      </button>
+
       <div className="card">
         {products.map((product) => (
           <ProducCard product={product} user={user} />

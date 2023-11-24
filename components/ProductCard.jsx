@@ -4,7 +4,7 @@ const React = require('react');
 function ProductCard({ product, user }) {
   console.log('>>>>>>>>>>>>>', user);
   return (
-    <div className="cardItem">
+    <div className="cardItem" data-id={product.id}>
       <header className="cardHeader">
         <h2 className="cardh2">{product.title}</h2>
       </header>
@@ -32,9 +32,16 @@ function ProductCard({ product, user }) {
       ) : (
         <p className="price">
           {user.isAdmin ? (
-            <a href={`/product/${product.id}/update`}>
-              <button type="submit"> Изменить </button>
-            </a>
+            <>
+              <a href={`/product/${product.id}/update`}>
+                <button type="submit"> Изменить </button>
+              </a>
+
+              <button className="delProduct" type="submit">
+                {' '}
+                Удалить{' '}
+              </button>
+            </>
           ) : (
             <a href={'/'}>
               <button className="buyProduct" type="submit">

@@ -8,30 +8,30 @@ if (formAddProduct) {
     event.preventDefault();
     const { title, url, price, count, status } = event.target;
     //
-    const img = [...url.files];
-    const dataFile = new FormData();
-    img.forEach((foto) => {
-      dataFile.append('homesImg', foto);
-    });
-    dataFile.append('title', title.value);
-    dataFile.append('price', price.value);
-    dataFile.append('count', count.value);
-    dataFile.append('status', status.value);
+    // const img = [...url.files];
+    // const dataFile = new FormData();
+    // img.forEach((foto) => {
+    //   dataFile.append('homesImg', foto);
+    // });
+    // dataFile.append('title', title.value);
+    // dataFile.append('price', price.value);
+    // dataFile.append('count', count.value);
+    // dataFile.append('status', status.value);
 
     //
-    const response = await fetch('/api/', {
+    const response = await fetch('/api/product', {
       method: 'POST',
-      // headers: {
-      //   'Content-type': 'application/json',
-      // },
-      // body: JSON.stringify({
-      //   title: title.value,
-      //   url: url.value,
-      //   price: price.value,
-      //   count: count.value,
-      //   status: status.value,
-      // }),
-      body: dataFile,
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        title: title.value,
+        url: url.value,
+        price: price.value,
+        count: count.value,
+        status: status.value,
+      }),
+      // body: dataFile,
     });
     const data = await response.json();
     if (data.html) {
@@ -83,12 +83,12 @@ if (productList) {
       }
     }
   });
-  productList.addEventListener('click', async (ev) => {
-    if (ev.target.classList.contains('buyProduct"')) {
-      const card = ev.target.closest('.cardItem');
-      const res = await fetch('/basket', {
-        method: 'POST',
-      });
-    }
-  });
+  // productList.addEventListener('click', async (ev) => {
+  //   if (ev.target.classList.contains('buyProduct"')) {
+  //     const card = ev.target.closest('.cardItem');
+  //     const res = await fetch('/basket', {
+  //       method: 'POST',
+  //     });
+  //   }
+  // });
 }
