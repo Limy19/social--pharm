@@ -13,6 +13,12 @@ function ProductList({ products, user }) {
           <FreeDrugsBanner product={product} />
         ))}
       </div>
+      <div className="sort">
+        <select className="sortSelect">
+          <option value="priceIncrease">возрастание цены</option>
+          <option value="priceDecrease">убывание цены</option>
+        </select>
+      </div>
       <div className="card">
         {products.map((product) => (
           <ProducCard product={product} user={user} />

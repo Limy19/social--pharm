@@ -2,6 +2,8 @@
 const formAddProduct = document.querySelector('.addProduct');
 const productList = document.querySelector('.card');
 const editProduct = document.querySelector('.editProduct');
+// const sortSelect = document.querySelector('.sortSelect');
+// console.log(sortSelect.value, '-------');
 
 if (formAddProduct) {
   formAddProduct.addEventListener('submit', async (event) => {
@@ -84,3 +86,11 @@ if (productList) {
     }
   });
 }
+
+// if (sortSelect) {
+//   sortSelect.addEventListener('click', (event) => {
+//     console.log(event.target.classList, '<----------');
+//     if (event.target.classList.contains('priceIncrease')) {
+//     }
+//   });
+// }

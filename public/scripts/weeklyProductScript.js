@@ -6,7 +6,7 @@ const divchik = document.querySelector('.gavno');
 const freeDrugsBanner = document.querySelector('.freeDrugsBanner');
 const card = document.querySelector('.card');
 
-console.log(element);
+// console.log(element);
 
 if (element) {
   console.log(true);
@@ -17,7 +17,7 @@ if (element) {
       headers: { 'Content-Type': 'application/json' },
     });
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     const products = JSON.parse(productsData); // Преобразуем JSON-строку обратно в объект
     if (data) {
       // Обновление данных карточек товаров и баннера вместо удаления и перерендеринга
