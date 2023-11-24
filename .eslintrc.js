@@ -28,5 +28,6 @@ module.exports = {
     'max-len': 0,
     'import/no-dynamic-require': 0,
     'global-require': 0,
+    'object-curly-newline': 0,
   },
 };

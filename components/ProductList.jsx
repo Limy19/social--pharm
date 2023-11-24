@@ -2,7 +2,7 @@ const React = require('react');
 const ProducCard = require('./ProductCard');
 const FreeDrugsBanner = require('./FreeDrugsBanner');
 
-function ProductList({ products }) {
+function ProductList({ products, user }) {
   const productsJSON = JSON.stringify(products); // Преобразуем данные о товарах в JSON-строку
 
   return (
@@ -15,7 +15,7 @@ function ProductList({ products }) {
       </div>
       <div className="card">
         {products.map((product) => (
-          <ProducCard product={product} />
+          <ProducCard product={product} user={user} />
         ))}
       </div>
     </div>

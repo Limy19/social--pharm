@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
     const html = res.renderComponent(Main, {
       title: 'Social-Pharmacy',
       products,
+      user: res.locals.user,
     });
     res.status(200).send(html);
   } catch ({ message }) {

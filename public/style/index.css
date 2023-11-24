@@ -6,16 +6,21 @@ body {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-
+.cardHeader {
+  margin: 0px;
+}
+.cardh2 {
+  margin: 4px;
+}
 .cardItem {
   display: flex;
   margin: 8px;
-  width: 200px;
-  height: 370px;
+  width: 240px;
+  height: 340px;
   align-content: space-around;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .cardItem {
@@ -107,4 +112,7 @@ li a:hover:not(.active) {
 
 .active {
   background-color: #04aa6d;
+}
+.price {
+  margin: 4px;
 }
